@@ -12,20 +12,20 @@ class _SwitcherWidgetState extends State<SwitcherWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(
-      // thumb color (round icon)
-      activeColor: Colors.white,
-      activeTrackColor: Colors.black,
-      inactiveThumbColor: Colors.blueGrey.shade600,
-      inactiveTrackColor: Colors.grey.shade400,
-      splashRadius: 0.0,
-      // boolean variable value
-      value: _value,
-      onChanged: (bool value) {
-        setState(() {
-          _value = value;
-        });
-      },
+    return Center(
+      child: Switch(
+        materialTapTargetSize: MaterialTapTargetSize.padded,
+        activeColor: Colors.white,
+        activeTrackColor: Colors.black,
+        inactiveThumbColor: Colors.blueGrey.shade600,
+        inactiveTrackColor: Colors.grey.shade400,
+        value: _value,
+        onChanged: (bool value) {
+          setState(() {
+            _value = value;
+          });
+        },
+      ),
     );
   }
 }
